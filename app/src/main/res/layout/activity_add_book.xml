@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddBookActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/addBookEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/addBookBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加书本数据"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/searchBookEt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/searchBookBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索书本数据"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/showSearchBookInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

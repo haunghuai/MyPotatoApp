@@ -1,0 +1,12 @@
+<?xml version="0.1" encoding="utf-8"?>
+<litepal>
+    <dbname value="BookDatabase" />
+    <version value="5" />
+    <list>
+        <mapping class="com.example.mybookactivity.logic.dao.entity.Book"></mapping>
+        <mapping class="com.example.mybookactivity.logic.dao.entity.BookChapter"></mapping>
+        <mapping class="com.example.mybookactivity.logic.dao.entity.BookContent"></mapping>
+        <mapping class="com.example.mybookactivity.logic.dao.entity.BookShelf"></mapping>
+    </list>
+
+</litepal>

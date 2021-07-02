@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/im"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        >
+
+        <com.example.mybookactivity.ui.recommand.MyAutoViewPager
+            android:id="@+id/auto_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="64dp"
+            android:layout_marginRight="64dp">
+
+
+        </com.example.mybookactivity.ui.recommand.MyAutoViewPager>
+        <LinearLayout
+            android:id="@+id/points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="9dp"
+            >
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/auto_viewpager"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        >
+        <LinearLayout
+            android:id="@+id/recommandBookBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="?attr/selectableItemBackground"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/good"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="推荐"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/completeBookBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="?attr/selectableItemBackground"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/complete"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="完结"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/hotRefreshBookBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="?attr/selectableItemBackground"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fire"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="热更"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/hot_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/title_layout"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            >
+        <ImageView
+            android:id="@+id/menu_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_book"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门连载"
+            android:layout_toRightOf="@+id/menu_pic"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            />
+         <TextView
+             android:id="@+id/hotRefreshMore"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:text="更多>"
+             />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/hotRefreshTitle"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/hotRefreshPic"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:src="@drawable/douluo"
+                android:scaleType="centerCrop"
+                />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/hotRefreshBookName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:text="斗罗大陆"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/textbigsize"
+                    />
+                <TextView
+                    android:id="@+id/hotRefreshDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="一个属于武魂的世界，名叫斗罗大陆。这里没有魔法，没有斗气，没有武术，却有神奇的武魂。这里的每个人，在自己六岁的时候，都会在武魂殿中令武魂觉醒。"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    />
+                <TextView
+                    android:id="@+id/hotRefreshAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="唐家三少"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/textsmallsize"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hot_refresh_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            />
+
+       </LinearLayout>
+
+        `<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/title_layout"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                >
+                <ImageView
+                    android:id="@+id/menu_pi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu_book"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="完本精选"
+                    android:layout_toRightOf="@+id/menu_pi"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="5dp"
+                    />
+                <TextView
+                    android:id="@+id/completeRefreshMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="更多>"
+                    />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/completeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/completeBookPic"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/diba"
+                    android:scaleType="centerCrop"
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/completeBookName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:text="帝霸"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/textbigsize"
+                        />
+                    <TextView
+                        android:id="@+id/completeDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="千万年前，李七夜栽下一株翠竹。 八百万年前，李七夜养了一条鲤鱼。 五百万年前，李七夜收养一个小女孩。 今天，李七夜一觉醒来，翠竹修练成神灵，鲤鱼化作金龙，小女孩成为九界女帝。"
+                        android:maxLines="3"
+                        android:ellipsize="end"
+                        />
+                    <TextView
+                        android:id="@+id/completeBookAuthor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="厌笔萧生"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/textcolor"
+                        android:textSize="@dimen/textsmallsize"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/completebook_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+     </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

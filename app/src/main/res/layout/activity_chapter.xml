@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.chapter.ChapterActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/maincolor"
+        >
+        <ImageView
+            android:id="@+id/chapterBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/chapterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="目录"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+
+            />
+    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chapterRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

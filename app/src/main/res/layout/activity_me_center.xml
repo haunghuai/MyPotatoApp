@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.mecenter.MeCenterActivity">
+
+    <FrameLayout
+        android:id="@+id/mytoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/maincolor"
+        android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/meCenterBack"
+                android:layout_width="18dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/back" />
+        <TextView
+        android:id="@+id/nav_text"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="个人中心"
+        android:textColor="@color/white"
+        android:textSize="@dimen/texttitlesize" />
+
+    </FrameLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="5dp"
+        android:background="?attr/selectableItemBackground"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="头像"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/myhead"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="center_vertical"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right"
+                android:layout_gravity="center_vertical"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d3d3d3"
+            android:layout_marginTop="100dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="101dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="账号"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="13434574345"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="5dp"
+        android:background="?attr/selectableItemBackground"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="绑定邮箱"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/right"
+                android:layout_gravity="center_vertical"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d3d3d3"
+            android:layout_marginTop="40dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="重置密码"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/right"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/meCenterExit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="5dp"
+        android:background="?attr/selectableItemBackground"
+        >
+        <TextView
+        android:id="@+id/meCenterExitLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退出登录"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

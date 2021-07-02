@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="horizontal"
+    android:background="?android:attr/selectableItemBackground"
+    >
+    <ImageView
+        android:id="@+id/bookShelfPic"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="5dp"
+        android:src="@drawable/bookpic"
+        android:scaleType="centerCrop"
+        />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:orientation="vertical"
+        >
+     <TextView
+         android:id="@+id/bookShelfBookName"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="5dp"
+         android:layout_marginRight="10dp"
+         android:text="城南旧事"
+         android:textColor="@color/black"
+         android:textStyle="bold"
+         android:textSize="@dimen/textbigsize"
+         />
+        <TextView
+            android:id="@+id/bookShelfBookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="林海音"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/textsmallsize"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            >
+         <TextView
+             android:id="@+id/bookShelfStatus"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="@dimen/textsmallsize"
+             android:textColor="@color/textcolor"
+             android:text="完结 ·"/>
+            <TextView
+                android:id="@+id/bookShelfLastChapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="第四章 驴打滚儿"
+                android:textSize="@dimen/textsmallsize"
+                android:textColor="@color/textcolor"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/bookDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/menu"
+        android:layout_marginRight="10dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+    <FrameLayout
+        android:id="@+id/mytoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/maincolor"
+        android:layout_alignParentTop="true">
+
+
+
+        <TextView
+            android:id="@+id/nav_text"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="书架"
+            android:textColor="@color/white"
+            android:textSize="@dimen/texttitlesize" />
+        <ImageView
+            android:id="@+id/nav_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="5dp"/>
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/main_contain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/decoration_line"
+        android:layout_below="@+id/mytoolbar"
+        />
+    <View
+        android:id="@+id/decoration_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/textcolor"
+        android:layout_above="@+id/bottom_layout"/>
+<LinearLayout
+    android:id="@+id/bottom_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    >
+    <LinearLayout
+        android:id="@+id/btn_book"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="5dp"
+        >
+        <ImageView
+            android:id="@+id/img_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/book_h"/>
+        <TextView
+            android:id="@+id/tv_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="书架"
+            android:textColor="@color/maincolor"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btn_shop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="5dp"
+        >
+        <ImageView
+            android:id="@+id/img_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/bookshop_n"/>
+        <TextView
+            android:id="@+id/tv_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="书城"
+            android:textColor="@color/textcolor"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btn_me"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="5dp"
+        >
+        <ImageView
+            android:id="@+id/img_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/me_n"/>
+        <TextView
+            android:id="@+id/tv_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="我的"
+            android:textColor="@color/textcolor"/>/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</RelativeLayout>

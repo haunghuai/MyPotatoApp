@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mybookactivity">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplicaton"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyBookActivity">
+        <activity android:name=".ui.complete.CompleteBookActivity"></activity>
+        <activity android:name=".ui.register.RegisterActivity" />
+        <activity android:name=".ui.mecenter.MeCenterActivity" />
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.showbookcontent.ShowBookContentActivity" />
+        <activity android:name=".ui.chapter.ChapterActivity" />
+        <activity android:name=".ui.search.SearchActivity" />
+        <activity android:name=".AddBookActivity" />
+        <activity android:name=".ui.welcome.WelcomeActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.bookdetails.BookDetailsActivity"
+            android:theme="@style/myTheme" />
+        <activity android:name=".ui.MainActivity">
+
+        </activity>
+    </application>
+
+</manifest>

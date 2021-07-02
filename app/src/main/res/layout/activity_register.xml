@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginActivity"
+    android:fitsSystemWindows="true"
+    >
+
+    <ImageView
+        android:id="@+id/registerAppIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/myappicon"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mytitleicon"
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center_horizontal"/>
+    <EditText
+        android:id="@+id/registerAccount"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/et_shape"
+        android:layout_marginTop="160dp"
+        android:layout_gravity="center_horizontal"
+        android:inputType="number"
+
+        android:maxLines="1"
+        android:hint="账号:"
+        />
+    <EditText
+        android:id="@+id/registerAccountPwd"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/et_shape"
+        android:layout_marginTop="220dp"
+        android:layout_gravity="center_horizontal"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:hint="密码:"
+        />
+    <EditText
+        android:id="@+id/registerAccountPwdOk"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/et_shape"
+        android:layout_marginTop="280dp"
+        android:layout_gravity="center_horizontal"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        android:hint="确认密码:"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/myAccountPwd"
+        android:layout_marginTop="340dp"
+        android:layout_gravity="center_horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="注册"/>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/registerFloatingBar"
+        android:layout_marginTop="380dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:borderWidth="0.0dip"
+        android:tint="@color/white"
+        android:src="@drawable/rightarrow"
+        app:elevation="5.0dip"
+        app:fabSize="normal"
+        android:layout_gravity="center_horizontal"
+        app:backgroundTint="@color/maincolor"
+        />
+
+
+
+</FrameLayout>

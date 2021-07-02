@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    >
+    <ImageView
+        android:id="@+id/hotItemPic"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:src="@drawable/douluo"
+        android:scaleType="fitXY"
+        />
+    <TextView
+        android:id="@+id/hotItemBookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="斗罗大陆"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/textsmallsize"
+        />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/hotItemAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="唐家三少"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/textsmallsize"
+        />
+
+
+
+</LinearLayout>
