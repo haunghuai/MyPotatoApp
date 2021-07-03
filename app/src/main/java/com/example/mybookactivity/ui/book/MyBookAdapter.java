@@ -23,6 +23,8 @@ import com.example.mybookactivity.logic.dao.BookDao;
 import com.example.mybookactivity.logic.dao.entity.BookShelf;
 import com.example.mybookactivity.ui.bookdetails.BookDetailsActivity;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.List;
 
 
@@ -97,7 +99,7 @@ public class MyBookAdapter extends RecyclerView.Adapter<MyBookAdapter.ViewHolder
                                     public void onClick(DialogInterface dialog, int which) {
                                         BookShelf bookShelf = mBookShelfList.get(viewHolder.getAdapterPosition());
                                         BookDao.deleteBookShelf(bookShelf.getId2());
-                                        notifyDataSetChanged();
+                                        EventBus.getDefault().post(new RefreshBookShelfEvent());
                                     }
                                 })
                                 .create();

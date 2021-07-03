@@ -6,12 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -20,18 +18,17 @@ import com.example.mybookactivity.ActivityCollector;
 import com.example.mybookactivity.MyApplicaton;
 import com.example.mybookactivity.R;
 import com.example.mybookactivity.databinding.ActivityBookDetailsBinding;
-import com.example.mybookactivity.logic.AllMyNetWork;
 import com.example.mybookactivity.logic.Repository;
 import com.example.mybookactivity.logic.dao.BookDao;
 import com.example.mybookactivity.logic.dao.entity.Book;
 import com.example.mybookactivity.logic.dao.entity.BookShelf;
 import com.example.mybookactivity.logic.model.BookSearch;
-import com.example.mybookactivity.ui.book.BookFragment;
+import com.example.mybookactivity.ui.book.RefreshBookShelfEvent;
 import com.example.mybookactivity.ui.chapter.ChapterActivity;
 import com.example.mybookactivity.ui.showbookcontent.ShowBookContentActivity;
 import com.google.android.material.appbar.AppBarLayout;
 
-import java.util.concurrent.ExecutionException;
+import org.greenrobot.eventbus.EventBus;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
 
@@ -52,6 +49,8 @@ public class BookDetailsActivity extends AppCompatActivity {
         ActivityCollector.getInstance().addActivity(this);
         binding = ActivityBookDetailsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
 
         setSupportActionBar(binding.myDetailsToolbar);
         ActionBar supportActionBar = getSupportActionBar();
@@ -121,6 +120,7 @@ public class BookDetailsActivity extends AppCompatActivity {
                     Toast.makeText(BookDetailsActivity.this,"加入书架成功",Toast.LENGTH_SHORT).show();
                     isHas=1;
                 }
+                EventBus.getDefault().post(new RefreshBookShelfEvent());
             }
         });
     }

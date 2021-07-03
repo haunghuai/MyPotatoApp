@@ -71,4 +71,8 @@ dependencies {
     //圆形加载
     implementation 'de.hdodenhof:circleimageview:3.0.1'
 
+    //EventBus
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+
 }

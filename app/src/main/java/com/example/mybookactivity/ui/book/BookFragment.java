@@ -19,6 +19,10 @@ import com.example.mybookactivity.R;
 import com.example.mybookactivity.databinding.BookfragmentBinding;
 import com.example.mybookactivity.logic.dao.entity.BookShelf;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import java.util.List;
 
 public class BookFragment extends Fragment {
@@ -35,6 +39,8 @@ public class BookFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = BookfragmentBinding.inflate(inflater,container,false);
         viewModel = ViewModelProviders.of(getActivity()).get(BookFragmentViewModel.class);
+
+
 
 
         binding.bookRecyclerview.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
@@ -65,11 +71,34 @@ public class BookFragment extends Fragment {
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        if(!EventBus.getDefault().isRegistered(this)){//加上判断
+            EventBus.getDefault().register(this);
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void refreshBookShelf(RefreshBookShelfEvent event){
+        viewModel.refreshBookShelf();
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
         if(myBookAdapter!=null && myBookAdapter.myBookDetailsDialog!=null){
             viewModel.refreshBookShelf();
             myBookAdapter.myBookDetailsDialog.dismiss();
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (EventBus.getDefault().isRegistered(this))//加上判断
+        {
+            EventBus.getDefault().unregister(this);
+        }
+
     }
 }

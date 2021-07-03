@@ -21,8 +21,10 @@ import com.example.mybookactivity.logic.Repository;
 import com.example.mybookactivity.logic.dao.BookDao;
 import com.example.mybookactivity.logic.dao.entity.BookShelf;
 import com.example.mybookactivity.logic.model.BookSearch;
+import com.example.mybookactivity.ui.book.RefreshBookShelfEvent;
 import com.example.mybookactivity.ui.bookdetails.BookDetailsActivity;
 
+import org.greenrobot.eventbus.EventBus;
 import org.litepal.LitePal;
 
 import java.util.List;
@@ -88,6 +90,7 @@ public class SearchRecyclerViewAdapter extends RecyclerView.Adapter<SearchRecycl
                     boolean result = Repository.getInstance().insertIntoBookShelf(id2);
                     if(result){
                         Toast.makeText(mContext,"加入书架成功",Toast.LENGTH_SHORT).show();
+                        EventBus.getDefault().post(new RefreshBookShelfEvent());
                     }
                     else {Toast.makeText(mContext,"加入书架失败",Toast.LENGTH_SHORT).show();}
                 }
